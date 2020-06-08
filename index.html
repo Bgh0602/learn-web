@@ -7,7 +7,6 @@
   <title>KaKaoTalk</title>
   <style>
     a {
-      color: black;
       text-decoration: none;
     }
 
@@ -24,9 +23,17 @@
       text-align: center;
     }
   </style>
+  <script>
+    function onload() {
+      const body = document.querySelector('body');
+      body.style.backgroundColor = 'black';
+      body.style.color = 'white';
+      body.style.
+    }
+  </script>
 </head>
 
-<body>
+<body onload='onload()'>
   <h1><strong><a href="https://www.kakaocorp.com/service/KakaoTalk" target="_blank"
         title="Kakao coporation web">KaKaoTalk</a></strong></h1>
   <a href="index.html"><img
@@ -44,7 +51,7 @@
     </li>
   </ol>
   <br>
-
+  <button onclick='alert(1)'>Click me!</button>
 </body>
 
 </html>
