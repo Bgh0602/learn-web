@@ -41,7 +41,7 @@
   <h1><strong><a href="https://www.kakaocorp.com/service/KakaoTalk" target="_blank"
         title="Kakao coporation web">KaKaoTalk</a></strong></h1>
   <input type="button" value="night" onclick="
-  let target='document.querySelector('body')'
+  let target=document.querySelector('body');
     if (value==='night') {
       target.style.color='white';
       target.style.backgroundColor='black';
@@ -69,14 +69,15 @@
   </ol>
   <br>
   <input type="button" value="night" onclick="
+  let target=document.querySelector('body');
   if (value==='night') {
-    document.querySelector('body').style.color='white';
-    document.querySelector('body').style.backgroundColor='black';
+    target.style.color='white';
+    target.style.backgroundColor='black';
     this.value='day';
   }
   else {
-    document.querySelector('body').style.color='black';
-    document.querySelector('body').style.backgroundColor='white';
+    target.style.color='black';
+    target.style.backgroundColor='white';
     this.value='night';
   }
   ">
