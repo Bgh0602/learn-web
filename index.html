@@ -40,16 +40,17 @@
 <body onload='onload()'>
   <h1><strong><a href="https://www.kakaocorp.com/service/KakaoTalk" target="_blank"
         title="Kakao coporation web">KaKaoTalk</a></strong></h1>
-  <input id="nightDay" type="button" value="night" onclick="
+  <input type="button" value="night" onclick="
+  let target='document.querySelector('body')'
     if (value==='night') {
-      document.querySelector('body').style.color='white';
-      document.querySelector('body').style.backgroundColor='black';
-      document.querySelector('#nightDay').value='day';
+      target.style.color='white';
+      target.style.backgroundColor='black';
+      this.value='day';
     }
     else {
-      document.querySelector('body').style.color='black';
-      document.querySelector('body').style.backgroundColor='white';
-      document.querySelector('#nightDay').value='night';
+      target.style.color='black';
+      target.style.backgroundColor='white';
+      this.value='night';
     }
   ">
   <a href="index.html"><img
@@ -67,6 +68,18 @@
     </li>
   </ol>
   <br>
+  <input type="button" value="night" onclick="
+  if (value==='night') {
+    document.querySelector('body').style.color='white';
+    document.querySelector('body').style.backgroundColor='black';
+    this.value='day';
+  }
+  else {
+    document.querySelector('body').style.color='black';
+    document.querySelector('body').style.backgroundColor='white';
+    this.value='night';
+  }
+  ">
 </body>
 
 </html>
