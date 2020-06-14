@@ -8,14 +8,7 @@
   <style>
     a {
       text-decoration: none;
-    }
-
-    a :visited {
-      color: gray;
-    }
-
-    a :active {
-      color: pink;
+      color: blue;
     }
 
     h1 {
@@ -28,30 +21,48 @@
     }
   </style>
   <script>
-    function onload() {
-      const body = document.querySelector('body');
-      body.style.backgroundColor = 'black';
-      body.style.color = 'white';
-      body.style.
+    function dayNightHandler(self) {
+      let target = document.querySelector('body');
+      if (self.value === 'night') {
+        target.style.color = 'white';
+        target.style.backgroundColor = 'black';
+        self.value = 'day';
+
+        var alist = document.querySelectorAll('a');
+        var i = 0;
+        console.log(alist);
+
+        while (i < alist.length) {
+          console.log(alist[i])
+          alist[i].style.color = 'skyblue';
+          i += 1;
+        }
+
+      }
+      else {
+        target.style.color = 'black';
+        target.style.backgroundColor = 'white';
+        self.value = 'night';
+
+        var alist = document.querySelectorAll('a');
+        var i = 0;
+        console.log(alist);
+
+        while (i < alist.length) {
+          console.log(alist[i])
+          alist[i].style.color = 'blue';
+          i += 1;
+        }
+      }
     }
   </script>
 </head>
 
-<body onload='onload()'>
+<body>
   <h1><strong><a href="https://www.kakaocorp.com/service/KakaoTalk" target="_blank"
         title="Kakao coporation web">KaKaoTalk</a></strong></h1>
   <input type="button" value="night" onclick="
-  let target=document.querySelector('body');
-    if (value==='night') {
-      target.style.color='white';
-      target.style.backgroundColor='black';
-      this.value='day';
-    }
-    else {
-      target.style.color='black';
-      target.style.backgroundColor='white';
-      this.value='night';
-    }
+   dayNightHandler(this)
   ">
   <a href="index.html"><img
       src="https://lh3.googleusercontent.com/Ob9Ys8yKMeyKzZvl3cB9JNSTui1lJwjSKD60IVYnlvU2DsahysGENJE-txiRIW9_72Vd"
@@ -69,17 +80,7 @@
   </ol>
   <br>
   <input type="button" value="night" onclick="
-  let target=document.querySelector('body');
-  if (value==='night') {
-    target.style.color='white';
-    target.style.backgroundColor='black';
-    this.value='day';
-  }
-  else {
-    target.style.color='black';
-    target.style.backgroundColor='white';
-    this.value='night';
-  }
+  dayNightHandler(this)
   ">
 </body>
 
