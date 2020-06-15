@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Object</h1>
+    <script>
+        var coworkers = {
+            'programmer': 'HSH',
+            'designer': 'BGH',
+            'financeOfficer': 'CWB'
+        }
+        document.write('programer : ' + coworkers.programmer + '<br>');
+        document.write('designer : ' + coworkers.designer + '<br>');
+        document.write('financeOfficer : ' + coworkers.financeOfficer + '<br>');
+        coworkers.bookkeeper = 'HBC';
+        document.write('bookkeeper : ' + coworkers.bookkeeper + '<br>');
+        coworkers['data scientist'] = 'SGW';
+        document.write('data scientist : ' + coworkers['data scientist'] + '<br>')
+    </script>
+    <h1>interation</h1>
+    <script>
+        for (var key in coworkers) {
+            document.write(key + ' : ' + coworkers[key] + '<br>');
+        }
+    </script>
+    <h1>Property & Method</h1>
+    <script>
+        coworkers.showAll = function () {
+            for (var key in this) {
+                document.write(key + ' : ' + this[key] + '<br>');
+            }
+        }//=function (showAll) {}
+        coworkers.showAll();
+    </script>
+</body>
+
+</html>
