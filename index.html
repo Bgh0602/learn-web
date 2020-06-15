@@ -21,38 +21,44 @@
     }
   </style>
   <script>
+    var link = {
+      setColor: function (color) {
+        var alist = document.querySelectorAll('a');
+        var i = 0;
+        console.log(alist);
+
+        while (i < alist.length) {
+          console.log(alist[i])
+          alist[i].style.color = color;
+          i += 1;
+        }
+      }
+    }
+
+    var body = {
+      setColor: function (color) {
+        document.querySelector('body').style.color = color;
+      },
+      setBackgroundColor: function (color) {
+        document.querySelector('body').style.backgroundColor = color;
+      }
+    }
+
     function dayNightHandler(self) {
       let target = document.querySelector('body');
       if (self.value === 'night') {
-        target.style.color = 'white';
-        target.style.backgroundColor = 'black';
+        body.setColor('white');
+        body.setBackgroundColor('black')
         self.value = 'day';
 
-        var alist = document.querySelectorAll('a');
-        var i = 0;
-        console.log(alist);
-
-        while (i < alist.length) {
-          console.log(alist[i])
-          alist[i].style.color = 'skyblue';
-          i += 1;
-        }
-
+        link.setColor('skyblue');
       }
       else {
-        target.style.color = 'black';
-        target.style.backgroundColor = 'white';
+        body.setColor('black');
+        body.setBackgroundColor('white');
         self.value = 'night';
 
-        var alist = document.querySelectorAll('a');
-        var i = 0;
-        console.log(alist);
-
-        while (i < alist.length) {
-          console.log(alist[i])
-          alist[i].style.color = 'blue';
-          i += 1;
-        }
+        link.setColor('blue')
       }
     }
   </script>
