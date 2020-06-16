@@ -1,14 +1,14 @@
-var link = {
-    setColor: function (color) {
+const link = {
+    setColor(color) {
         $('a').css('color', color);
     }
 }
 
-var body = {
-    setColor: function (color) {
+const body = {
+    setColor(color) {
         $('body').css('color', color);
     },
-    setBackgroundColor: function (color) {
+    setBackgroundColor(color) {
         $('body').css('backgroundColor', color);
     }
 }
@@ -21,8 +21,7 @@ function dayNightHandler(self) {
         self.value = 'day';
 
         link.setColor('skyblue');
-    }
-    else {
+    } else {
         body.setColor('black');
         body.setBackgroundColor('white');
         self.value = 'night';
