@@ -9,13 +9,13 @@
 
 <body>
     <script>
-        var nameList = ['BGH', 'HSH', 'CWB', 123, 123];
+        const nameList = ['BGH', 'HSH', 'CWB', 123, 123];
 
-        for (var index = 0; index < nameList.length; index++) {
+        for (let index = 0; index < nameList.length; index++) {
             document.write(nameList[index] + ' ');
         }
 
-        var i = 0;
+        let i = 0;
         while (i < nameList.length) {
             document.write(nameList[i] + ' ');
             i += 1;
@@ -26,11 +26,13 @@
         function arrayName() {
             document.write('BGH' + ' ');
         }
+        
         arrayName()
 
         function sum(left, right) {
             document.write(left - right + '<br>')
         }
+        
         sum(1, 2)
     </script>
 
@@ -39,6 +41,7 @@
         function sum2(left, right) {
             return (left + right)
         }
+        
         document.write(sum2(2, 3) + '<br>');
         document.write('<div style="color:red">' + sum2(2, 3) + '<div>')
     </script>
