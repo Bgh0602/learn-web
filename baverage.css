@@ -1,0 +1,83 @@
+#cokeImage {
+    width: 50px;
+    height: 70px;
+    position: absolute;
+    left: 70px;
+    top: 30px;
+}
+
+#ciderImage {
+    width: 50px;
+    height: 70px;
+    position: absolute;
+    left: 195px;
+    top: 30px;
+}
+
+#fantaImage {
+    width: 50px;
+    height: 70px;
+    position: absolute;
+    left: 320px;
+    top: 30px;
+}
+
+#coffeeImage {
+    width: 50px;
+    height: 70px;
+    position: absolute;
+    left: 70px;
+    top: 130px;
+}
+
+#cocoaImage {
+    width: 50px;
+    height: 70px;
+    position: absolute;
+    left: 195px;
+    top: 130px;
+}
+
+#waterImage {
+    width: 50px;
+    height: 70px;
+    position: absolute;
+    left: 320px;
+    top: 130px;
+}
+
+#coke {
+    position: absolute;
+    left: 70px;
+    top: 100px;
+}
+
+#cider {
+    position: absolute;
+    left: 195px;
+    top: 100px;
+}
+
+#fanta {
+    position: absolute;
+    left: 320px;
+    top: 100px;
+}
+
+#coffee {
+    position: absolute;
+    left: 70px;
+    top: 200px;
+}
+
+#cocoa {
+    position: absolute;
+    left: 195px;
+    top: 200px;
+}
+
+#water {
+    position: absolute;
+    left: 320px;
+    top: 200px;
+}

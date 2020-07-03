@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vending Machine
+    </title>
+    <style>
+        #canvas {
+            border: 10px solid black;
+            width: 400px;
+            height: 500px;
+        }
+    </style>
+
+    <link rel="stylesheet" href="baverage.css">
+</head>
+
+<body>
+    <canvas id='canvas'></canvas>
+
+    <button id='coke'>coke</button>
+    <button id='cider'>cider</button>
+    <button id='fanta'>fanta</button>
+    <button id='cocoa'>cocoa</button>
+    <button id='water'>water</button>
+    <button id='coffee'>coffee</button>
+
+    <img id='cokeImage' src="cokeImage.jpg">
+    <img id='ciderImage' src="ciderImage.jpg">
+    <img id='fantaImage' src="fantaImage.png">
+    <img id='coffeeImage' src="coffeeImage.jpg">
+    <img id='cocoaImage' src="cocoaImage.jpg">
+    <img id='waterImage' src="waterImage.jpg">
+
+    <div id='priceList'>
+        <h3>Price List</h3>
+        Coke:1200won Coffe: 1000won
+        <br>Cider: 1200won Cocoa: 800won
+        <br>Fanta: 1000won Water: 800won
+        </p>
+    </div>
+
+
+    <script src='canvas.js'></script>
+
+    <script>
+        baverage = {
+            name: [coke, cider, fanta, cocoa, water, coffee,],
+            priece: [1200, 1000, 800,]
+        }
+    </script>
+</body>
+
+</html>
