@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vending Machine
+    </title>
+    <style>
+        #canvas {
+            border: 10px solid black;
+            width: 400px;
+            height: 500px;
+        }
+
+        #currentMoney {
+            position: absolute;
+            left: 250px;
+            top: 230px;
+        }
+
+        .changeMoney {
+            margin-right: -6px;
+            position: absolute;
+            left: 200px;
+            top: 290px;
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+            background-color: white;
+            border: 1px solid blue;
+            color: blue;
+        }
+
+        .coinInlet {
+            margin-left: -10px;
+            position: absolute;
+            left: 310px;
+            top: 290px;
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+            background-color: white;
+            border: 1px solid blue;
+            color: blue;
+        }
+
+        .coinInlet:hover {
+            background-color: skyblue;
+        }
+
+        .changeMoney:hover {
+            background-color: skyblue;
+        }
+
+        .coinInlet:active {
+            transform: translateY(3px);
+        }
+
+        .changeMoney:active {
+            transform: translateY(3px);
+        }
+    </style>
+
+    <link rel="stylesheet" href="baverage.css">
+    <script>
+        let money = 0;
+        function putCoin() {
+            money += 500;
+            document.getElementById('currentMoney').innerHTML = money + 'won';
+        }
+    </script>
+</head>
+
+<body>
+    <canvas id='canvas'></canvas>
+
+    <button id='coke'>coke</button>
+    <button id='cider'>cider</button>
+    <button id='fanta'>fanta</button>
+    <button id='cocoa'>cocoa</button>
+    <button id='water'>water</button>
+    <button id='coffee'>coffee</button>
+
+    <button class='changeMoney'>change money</button>
+    <button class='coinInlet' onclick='putCoin()'>coin inlet</button>
+
+    <img id='cokeImage' src="cokeImage.jpg">
+    <img id='ciderImage' src="ciderImage.jpg">
+    <img id='fantaImage' src="fantaImage.png">
+    <img id='coffeeImage' src="coffeeImage.jpg">
+    <img id='cocoaImage' src="cocoaImage.jpg">
+    <img id='waterImage' src="waterImage.jpg">
+
+    <h3>Price List</h3>
+    Coke:1200won Coffe: 900won
+    <br>Cider: 1200won Cocoa: 700won
+    <br>Fanta: 900won Water: 700won
+
+    <p id=currentMoney></p>
+    <script src='canvas.js'></script>
+</body>
+
+</html>
