@@ -63,9 +63,19 @@
     <link rel="stylesheet" href="baverage.css">
     <script>
         let money = 0;
+        let i = 0;
+        let wallet = Math.floor(Math.random() * 5 + 1)
         function putCoin() {
-            money += 500;
+            if (i < wallet) {
+                money += 1000;
+                i += 1;
+            }
             document.getElementById('currentMoney').innerHTML = money + 'won';
+
+            if (money > 700) {
+                let sure = document.getElementById('coke');
+                sure.style.backgroundColor = '#F7819F';
+            }
         }
     </script>
 </head>
@@ -73,6 +83,7 @@
 <body>
     <canvas id='canvas'></canvas>
 
+    배열만들기
     <button id='coke'>coke</button>
     <button id='cider'>cider</button>
     <button id='fanta'>fanta</button>
@@ -91,10 +102,14 @@
     <img id='waterImage' src="waterImage.jpg">
 
     <h3>Price List</h3>
-    Coke:1200won Coffe: 900won
-    <br>Cider: 1200won Cocoa: 700won
-    <br>Fanta: 900won Water: 700won
-
+    <ul>
+        <li><strong>Coke</strong>:1200won</li>
+        <li><strong>Cider</strong>: 1200won</li>
+        <li><strong>Fanta</strong>: 900won</li>
+        <li><strong>Coffee</strong>: 900won</li>
+        <li><strong>Cocoa</strong>: 700won</li>
+        <li><strong>Water</strong>: 700won</li>
+    </ul>
     <p id=currentMoney></p>
     <script src='canvas.js'></script>
 </body>
