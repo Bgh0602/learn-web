@@ -65,6 +65,26 @@
         let money = 0;
         let i = 0;
         let wallet = Math.floor(Math.random() * 5 + 1)
+
+        function giveWaterNCocoa() {
+            if (money > 700) {
+                money = money - 700;
+            }
+            document.getElementById('currentMoney').innerHTML = money + 'won';
+        }
+        function giveFantaNCoffee() {
+            if (money > 900) {
+                money = money - 900;
+            }
+            document.getElementById('currentMoney').innerHTML = money + 'won';
+        }
+        function giveCokeNCider() {
+            if (money > 1200) {
+                money = money - 1200;
+            }
+            document.getElementById('currentMoney').innerHTML = money + 'won';
+        }
+
         function putCoin() {
             if (i < wallet) {
                 money += 1000;
@@ -72,10 +92,44 @@
             }
             document.getElementById('currentMoney').innerHTML = money + 'won';
 
-            if (money > 700) {
-                let sure = document.getElementById('coke');
-                sure.style.backgroundColor = '#F7819F';
+        }
+        function changeColor() {
+            let buyCoke = document.getElementById('coke');
+            let buyCider = document.getElementById('cider');
+            let buyFanta = document.getElementById('fanta');
+            let buyCoffee = document.getElementById('coffee');
+            let buyCocoa = document.getElementById('cocoa');
+            let buyWater = document.getElementById('water');
+
+            buyCoke.style.backgroundColor = '#FFFFFF';
+            buyCider.style.backgroundColor = '#FFFFFF';
+            buyFanta.style.backgroundColor = '#FFFFFF';
+            buyCoffee.style.backgroundColor = '#FFFFFF';
+            buyCocoa.style.backgroundColor = '#FFFFFF';
+            buyWater.style.backgroundColor = '#FFFFFF';
+
+            if (money >= 1200) {
+                buyCoke.style.backgroundColor = '#F7819F';
+                buyCider.style.backgroundColor = '#F7819F';
+                buyFanta.style.backgroundColor = '#F7819F';
+                buyCoffee.style.backgroundColor = '#F7819F';
+                buyCocoa.style.backgroundColor = '#F7819F';
+                buyWater.style.backgroundColor = '#F7819F';
             }
+            else if (money >= 900 && money < 1200) {
+                buyFanta.style.backgroundColor = '#F7819F';
+                buyCoffee.style.backgroundColor = '#F7819F';
+                buyCocoa.style.backgroundColor = '#F7819F';
+                buyWater.style.backgroundColor = '#F7819F';
+            }
+            else if (money >= 700 && money < 900) {
+                buyCocoa.style.backgroundColor = '#F7819F';
+                buyWater.style.backgroundColor = '#F7819F';
+            }
+        }
+        function changeMoney() {
+            money = 0;
+            document.querySelector('#currentMoney').innerHTML = money + 'won';
         }
     </script>
 </head>
@@ -83,16 +137,15 @@
 <body>
     <canvas id='canvas'></canvas>
 
-    배열만들기
-    <button id='coke'>coke</button>
-    <button id='cider'>cider</button>
-    <button id='fanta'>fanta</button>
-    <button id='cocoa'>cocoa</button>
-    <button id='water'>water</button>
-    <button id='coffee'>coffee</button>
+    <button id='coke' onclick='giveCokeNCider(); changeColor() '>coke</button>
+    <button id='cider' onclick='giveCokeNCider();changeColor()'>cider</button>
+    <button id='fanta' onclick='giveFantaNCoffee();changeColor()'>fanta</button>
+    <button id='coffee' onclick='giveFantaNCoffee();changeColor()'>coffee</button>
+    <button id='cocoa' onclick='giveWaterNCocoa();changeColor()'>cocoa</button>
+    <button id='water' onclick='giveWaterNCocoa();changeColor()'>water</button>
 
-    <button class='changeMoney'>change money</button>
-    <button class='coinInlet' onclick='putCoin()'>coin inlet</button>
+    <button class='changeMoney' onclick='changeMoney(); changeColor();'>change money</button>
+    <button class='coinInlet' onclick='putCoin(); changeColor()'>coin inlet</button>
 
     <img id='cokeImage' src="cokeImage.jpg">
     <img id='ciderImage' src="ciderImage.jpg">
